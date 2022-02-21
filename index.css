@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --clr-primary-300: 216 87% 60%;
+  --clr-primary-400: 216 87% 40%;
+  --clr-primary-500: 216 87% 20%;
+  
+  --ff-serif: "Roboto Slab", serif;
+  --ff-sans: "Barlow", sans-serif;
+  --ff-sans-cond: "Barlow Condensed", sans-serif;
+  
+  --fs-200: 0.875rem;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.75rem;
+  --fs-600: 2rem;
+  --fs-700: 3.5rem;
+  --fs-800: 6.25rem;
+  --fs-900: 9.375rem;
+
+  font-family: var(--ff-serif);
+}
+
+::selection {
+  background-color: hsl(var(--clr-primary-400) / 0.1);
+}
+
+body {
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  max-width: 5in;
+  padding: 2rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 2rem -10px hsl(var(--clr-primary-400));
+  margin: 1.5rem;
+  text-align: center;
+}
+
+h1 {
+  color: hsl(var(--clr-primary-400));
+  margin-bottom: 0.6rem;
+}
